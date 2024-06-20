@@ -11,3 +11,89 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* Resetting some default styles */
+body {
+  font-family: Arial, sans-serif;
+}
+
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.3s;
+}
+
+/* Styles for Secondary Button */
+.custom-ant-btn-secondary {
+  background-color: transparent;
+  /* Transparent background */
+  color: #1890ff;
+  /* Primary color text */
+  padding: 0 15px;
+  /* Horizontal padding */
+  height: 32px;
+  /* Button height */
+  line-height: 1;
+  /* Line height */
+  border-radius: 2px;
+  /* Border radius */
+  border: 1px solid #1890ff;
+  /* Border color matching primary color */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.custom-ant-btn-secondary:hover {
+  color: #40a9ff;
+  /* Hover text color */
+  border-color: #40a9ff;
+  /* Hover border color */
+}
+
+.custom-ant-btn-secondary:active {
+  color: #096dd9;
+  /* Active text color */
+  border-color: #096dd9;
+  /* Active border color */
+}
+
+.custom-ant-btn {
+  background-color: #1890ff;
+  /* Primary color */
+  color: white;
+  padding: 0 15px;
+  /* Horizontal padding */
+  height: 32px;
+  /* Button height */
+  line-height: 1;
+  /* Line height */
+  border-radius: 2px;
+  /* Border radius */
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.045);
+  /* Shadow for the button */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.custom-ant-btn:hover {
+  background-color: #40a9ff;
+  /* Hover color */
+}
+
+.custom-ant-btn:active {
+  background-color: #096dd9;
+  /* Active color */
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.15);
+  /* Active shadow */
+}
+
+.custom-ant-btn:focus {
+  background-color: #40a9ff;
+  /* Focus color */
+  box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2);
+  /* Focus shadow */
+}

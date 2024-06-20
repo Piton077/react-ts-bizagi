@@ -1,24 +1,24 @@
-import React from 'react';
-import logo from './logo.svg';
+import 'bpmn-js/dist/assets/bpmn-font/css/bpmn-embedded.css';
 import './App.css';
 
+import 'bpmn-js/dist/assets/diagram-js.css';
+import { useState } from 'react';
+import Modeler from './Modeler';
+import Viewer from './Viewer';
+
 function App() {
+  const [flowChartXml, setFlowChartXml] = useState<string>("")
+
+  const fetchXml = (xml: string) => {
+    setFlowChartXml(xml)
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div style={{ padding: '20px' }}>
+        <Modeler save={fetchXml} />
+        <Viewer bpmnXml={flowChartXml} />
+      </div>
     </div>
   );
 }
